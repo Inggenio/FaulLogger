@@ -22,3 +22,5 @@ Inhalte dieses Repositories
   -🗜️ ZIP-Datei mit allen Fertigungsdaten (für z. B. JLCPCB)
 
   🧠 Arduino-Code zur Passwortausgabe
+
+  ->> Die Verbindung soll über einen USB-Anschluss bzw. ein USB-Kabel mit einem Datenträger hergestellt werden. <<-
