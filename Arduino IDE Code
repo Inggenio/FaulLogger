@@ -1,0 +1,62 @@
+//Code for Arduino IDE
+
+#include <Keyboard.h>
+
+int rxLed = 17;
+int passwortPin1 = 9;
+int passwortPin2 = 10;
+String password1 = "sehrSicher";
+String password2 = "sehrSicher";
+
+
+void setup() {
+  //Initialize digital pin LED_BUILTIN as an output.
+  pinMode(rxLed, OUTPUT);
+
+  //PinMode Button Pass1
+  pinMode(passwortPin1, INPUT_PULLUP);
+
+   //PinMode Button Pass2
+  pinMode(passwortPin2, INPUT_PULLUP);
+
+  Keyboard.begin();
+
+}
+
+
+void loop() {
+  
+  //Button 1
+  if(digitalRead(passwortPin1) == 0){
+    Keyboard.print(password1);
+    delay(50);
+    Keyboard.write(176);
+    blinkBoton(5, 200);
+    delay(300);
+  }
+
+  //Button2
+  if(digitalRead(passwortPin2) == 0){
+    Keyboard.print(password2);
+    delay(50);
+    Keyboard.write(176);
+    blinkBoton(5, 200);
+    delay(300);
+  }
+  
+             
+}
+
+
+void blinkBoton(int j,int ms){
+  for(int i = 0; i < j; i++){
+    blinkLed(ms);
+  }
+}
+void blinkLed(int tiempo){
+  digitalWrite(rxLed, HIGH);  
+  delay(tiempo);                
+  digitalWrite(rxLed, LOW);   
+  delay(tiempo);  
+}
+
