@@ -1,16 +1,14 @@
 # FaulLogger
 Ein einfaches Projekt, um sich mit nur einem Tastendruck am Arbeits-PC einzuloggen.
-Idee
+
+# Idee
 
 Die Passwörter, die von Unternehmen gefordert werden, werden immer länger und komplizierter. Dieses Projekt ermöglicht es, drei verschiedene Passwörter durch das Drücken eines Knopfes automatisch über USB einzugeben – ideal für den schnellen und sicheren Login.
 Komponenten
 
   -Arduino Leonardo (wichtig wegen der HID-Funktion) -> Aktuell Pro Micro ATmega32u4 Modul
-
   -3 Taster
-
   -Leiterplatte (Footprint für Arduino Leonardo inkludiert)
-
   -Gehäuse (optional)
 
 Inhalte dieses Repositories
